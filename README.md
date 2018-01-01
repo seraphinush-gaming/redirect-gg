@@ -17,5 +17,7 @@ tera-proxy module to redirect spawn location in TERA dungeon `Ghillieglade`
 - Original author : [Some-AV-Popo](https://github.com/Some-AV-Popo)
 
 ## Changelog
+### 1.23
+- Updated font color
 ### 1.22
 - Initial online commit
