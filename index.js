@@ -33,7 +33,7 @@ module.exports = function RedirectGhillieglade(d) {
 		const Command = require('command')
 		const command = Command(d)
 		// toggle
-		command.add(['gg', 'ghillie','ㄱㄹ'], () => {
+		command.add(['gg', 'ㄱㄹ'], () => {
 			enable = !enable
 			send(`${enable ? '실행되었습니다'.clr('56B4E9') : '중지되었습니다'.clr('E69F00')}` + `.`.clr('FFFFFF'))
 		})
