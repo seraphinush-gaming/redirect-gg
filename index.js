@@ -3,7 +3,7 @@
 // S_LOAD_TOPO
 // S_SPAWN_ME
 
-// Version 1.23 r:00
+// Version 1.23 r:01
 
 const GHILLIEGLADE = { x: 52232.98046875, y: 117318.875, z: 4382.390625 }
 
@@ -32,7 +32,8 @@ module.exports = function RedirectGhillieglade(d) {
 	try {
 		const Command = require('command')
 		const command = Command(d)
-		command.add(['gg', 'ghillie','ㄱㄹ', '길랸', '길리안'], () => {
+		// toggle
+		command.add(['gg', 'ghillie','ㄱㄹ'], () => {
 			enable = !enable
 			send(`${enable ? '실행되었습니다'.clr('56B4E9') : '중지되었습니다'.clr('E69F00')}` + `.`.clr('FFFFFF'))
 		})
