@@ -3,7 +3,7 @@
 // S_LOAD_TOPO
 // S_SPAWN_ME
 
-// Version 1.23 r:01
+// Version 1.23 r:02
 
 const GHILLIEGLADE = { x: 52232.98046875, y: 117318.875, z: 4382.390625 }
 
@@ -24,7 +24,7 @@ module.exports = function RedirectGhillieglade(d) {
 			Object.assign(e, GHILLIEGLADE)
 			return true
 		} 
-		// Velik's Sanctuary
+		// auto-reset at Velik's Sanctuary
 		else if (myZone === 9714) d.toServer('C_RESET_ALL_DUNGEON', {})
 	})
 
