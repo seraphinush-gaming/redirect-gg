@@ -15,6 +15,9 @@ tera-proxy module to redirect spawn location in TERA dungeon `Ghillieglade`
 ## Changelog
 <details>
 
+    1.24
+    - Added auto-update support
+    - Updated to latest tera-data format
     1.23
     - Updated font color
     1.22
