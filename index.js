@@ -1,4 +1,4 @@
-// Version 1.24 r:00
+// Version 1.24 r:01
 
 const Command = require('command')
 const config = require('./config.json')
@@ -13,7 +13,7 @@ module.exports = function RedirectGg(d) {
 
 	let enable = config.enable
 
-	let	myZone = -1
+	let	myZone = 0
 
 	// code
 	d.hook('S_LOAD_TOPO', (e) => { myZone = e.zone })
