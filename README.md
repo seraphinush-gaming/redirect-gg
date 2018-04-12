@@ -10,7 +10,7 @@ tera-proxy module to redirect spawn location in TERA dungeon `Ghillieglade`
   - Default is `true`
 
 ## Config
-- __`enable`
+- __`enable`__
   - Initialize module on/off
   - Default is `true`
 
