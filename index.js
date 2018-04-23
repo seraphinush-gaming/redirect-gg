@@ -1,9 +1,9 @@
-// Version 1.24 r:01
+// Version 1.24 r:02
 
 const Command = require('command')
 const config = require('./config.json')
 
-const GHILLIEGLADE = { x: 52232.98046875, y: 117318.875, z: 4382.390625 }
+const GHILLIEGLADE = { x: 52232, y: 117318, z: 4388 }
 
 // credit : https://github.com/Some-AV-Popo
 String.prototype.clr = function (hexColor) { return `<font color="#${hexColor}">${this}</font>` }
