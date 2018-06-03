@@ -1,4 +1,4 @@
-// Version 1.24 r:03
+// Version 1.24 r:04
 
 const Command = require('command')
 const config = require('./config.json')
@@ -29,7 +29,7 @@ module.exports = function RedirectGg(d) {
 		} 
 		// auto-reset at Velik's Sanctuary
 		else if (myZone === SANCTUARY) {
-			d.toServer('C_RESET_ALL_DUNGEON', {})
+			d.send('C_RESET_ALL_DUNGEON', 1, {})
 		}
 	})
 
