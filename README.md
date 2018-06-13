@@ -16,6 +16,7 @@ tera-proxy module to redirect spawn location in TERA dungeon `Ghillieglade`
 
 ## Info
 - Original author : [Some-AV-Popo](https://github.com/Some-AV-Popo)
+- **Support seraph via paypal donations, thanks in advance : [paypal](https://www.paypal.me/seraphinush)**
 
 ## Changelog
 <details>
