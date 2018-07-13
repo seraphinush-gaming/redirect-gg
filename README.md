@@ -3,6 +3,7 @@ tera-proxy module to redirect spawn location in TERA dungeon `Ghillieglade`
 
 ## Dependency
 - `Command` module
+- `tera-game-state` module
 
 ## Usage
 - __`gg` · `ㄱㄹ`__
@@ -21,6 +22,9 @@ tera-proxy module to redirect spawn location in TERA dungeon `Ghillieglade`
 ## Changelog
 <details>
 
+    1.25
+    - Removed font color bloat
+    - Added `tera-game-state` dependency
     1.24
     - Added auto-update support
     - Updated to latest tera-data format

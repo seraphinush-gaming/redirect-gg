@@ -1,12 +1,11 @@
 {
 	"files": {
 		"config.json": { "overwrite": false, "hash": "4884e0622aa6aa79f5c27b43531c8b0aa4558a78e1bb0f49780734e0dc571b07" },
-		"index.js": "de0fee86ed25675f937da075d3f5158f8dce7ef2b0fa44a720e25ca3f2dcfbe0",
+		"index.js": "8c4fc503ca484b71f4f83ac41cde2076e64672344703f7652bab1bee3514260a",
 		"module.json": "785d31f5fe5fcd630498bb901ad1789a7af11a61945bcc277a54631698c36b85"
 	},
 	"defs": {
 		"C_RESET_ALL_DUNGEON": 1,
-		"S_LOAD_TOPO": 3,
 		"S_SPAWN_ME": 2
 	}
 }
