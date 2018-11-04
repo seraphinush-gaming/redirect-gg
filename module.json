@@ -1,6 +1,5 @@
 {
-    "disableAutoUpdate": false,
+    "disableAutoUpdate": true,
     "options": { "niceName": "redirect-gg" },
-    "servers": ["https://raw.githubusercontent.com/seraphinush-gaming/redirect-gg/master/"],
-    "supportUrl": "https://github.com/seraphinush-gaming/redirect-gg/issues"
+    "servers": ["https://raw.githubusercontent.com/seraphinush-gaming/redirect-gg/master/"]
 }

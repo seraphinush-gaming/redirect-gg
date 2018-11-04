@@ -1,4 +1,5 @@
-// Version 1.26 r:01
+// Version 1.28 r:00
+'use strict';
 
 const config = require('./config.json');
 
@@ -9,15 +10,17 @@ module.exports = function RedirectGg(m) {
 
 	// config
 	let enable = config.enable;
+	let notice = config.notice;
 
 	let	myZone = 0;
+	let resetMessage = m.region == "kr" ? "던전이 초기화 되었습니다 !" : "Dungeon has been reset !";
 
 	// command
 	// toggle
 	m.command.add('gg', {
 		$none() {
 			enable = !enable;
-			send(`${enable ? 'Enabled' : 'Disabled'}`);
+			send(`${enable ? 'En' : 'Dis'}abled`);
 		}
 	});
 
@@ -31,10 +34,19 @@ module.exports = function RedirectGg(m) {
 		if (myZone in location) {
 			Object.assign(e.loc, location[myZone]);
 			return true
-		} 
+		}
 		// auto-reset at Velik's Sanctuary
 		else if (myZone === ZONE_SANCTUARY) {
+			if (notice) {
+				m.send('S_DUNGEON_EVENT_MESSAGE', 2, {
+					type: 31, // normal orange text
+					chat: 0,
+					channel: 27,
+					message: resetMessage
+				});
+			}
 			m.send('C_RESET_ALL_DUNGEON', 1, {});
+			
 		}
 	});
 

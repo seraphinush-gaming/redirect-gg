@@ -1,5 +1,11 @@
+### WARNING
+This module is unethical. user discretion is advised.
+
 # redirect-gg
-tera-proxy module to redirect spawn location in TERA dungeon `Ghillieglade`
+tera-proxy unethical module to redirect spawn location in TERA dungeon `Ghillieglade`
+
+## Auto-update guide
+- Create a folder called `redirect-gg` in `tera-proxy/bin/node_modules` and download [`module.json`](https://raw.githubusercontent.com/seraphinush-gaming/redirect-gg/master/module.json) (right-click save link as...) into the folder
 
 ## Dependency
 - `command` module
@@ -22,6 +28,8 @@ tera-proxy module to redirect spawn location in TERA dungeon `Ghillieglade`
 ## Changelog
 <details>
 
+    1.28
+    - Added reset notice at Sanctuary
     1.26
     - Removed `command` require()
     - Removed `tera-game-state` require()
