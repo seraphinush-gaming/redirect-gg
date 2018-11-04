@@ -1,5 +1,5 @@
 {
-    "disableAutoUpdate": true,
+    "disableAutoUpdate": false,
     "options": { "niceName": "redirect-gg" },
     "servers": ["https://raw.githubusercontent.com/seraphinush-gaming/redirect-gg/master/"]
 }
