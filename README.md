@@ -1,11 +1,11 @@
 ### WARNING
-This module is unethical. user discretion is advised.
+This module is unethical. module provider, seraphinush-gaming will not be responsible or liable in any way for use of this module. no liability or responsibility is accepted by the module provider. user discretion is advised.
 
 # redirect-gg
 tera-proxy unethical module to redirect spawn location in TERA dungeon `Ghillieglade`
 
 ## Auto-update guide
-- Create a folder called `redirect-gg` in `tera-proxy/bin/node_modules` and download [`module.json`](https://raw.githubusercontent.com/seraphinush-gaming/redirect-gg/master/module.json) (right-click save link as...) into the folder
+- Create a folder called `redirect-gg` in `tera-proxy/bin/node_modules` and download >> [`module.json`](https://raw.githubusercontent.com/seraphinush-gaming/redirect-gg/master/module.json) << (right-click save link as...) into the folder
 
 ## Dependency
 - `command` module
