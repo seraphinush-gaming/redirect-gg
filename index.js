@@ -1,4 +1,3 @@
-// Version 1.28 r:01
 'use strict';
 
 const config = require('./config.json');
@@ -55,6 +54,6 @@ module.exports = function RedirectGg(mod) {
 	});
 
 	// helper
-	function send(msg) { cmd.message(`: ` + msg); }
+	function send(msg) { cmd.message(': ' + msg); }
 
 }

@@ -1,12 +1,12 @@
 {
 	"files": {
-		"README.md": "7fde54a23f2f9b128a16a02285472414c417addeb832cd99c3ea0651cc99134d",
+		"README.md": "6f9343ae31f3e40bc7d382d4d1534204312482b7db3ee0f06834d70e85db83ed",
 		"config.json": {
 			"overwrite": false,
 			"hash": "42395a9016e21146b42e2330e2da8a1e2f9dfb2aeff475a5b39fa4533c419ab0"
 		},
-		"index.js": "c9444005b9e75390b4a7e1d34c5285eb02114517f4e84c062129143d7aef69ec",
-		"module.json": "ae0ed90c33a54650aa648725f397cd140c438dd4984db4f9fe00a0ea7b52f3bc"
+		"index.js": "e1caf2da9e4b988ef96e41d04e3092885316011adfe0d50717583592388c85db",
+		"module.json": "a2a007bfba512d0225513c63d81b39f84577b99a775bcd31b956f47faafb33f3"
 	},
 	"defs": {
 		"C_RESET_ALL_DUNGEON": 1,
