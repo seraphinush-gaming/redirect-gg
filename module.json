@@ -1,5 +1,8 @@
 {
     "disableAutoUpdate": false,
-    "options": { "niceName": "redirect-gg" },
+    "name": "redirect-gg",
+    "author": "seraphinush",
+    "description": "unethical tera-proxy module to redirect spawn location in TERA dungeon 'Ghillieglade'",
+    "version": "1.29.00",
     "servers": ["https://raw.githubusercontent.com/seraphinush-gaming/redirect-gg/master/"]
 }
