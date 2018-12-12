@@ -2,7 +2,7 @@
 
 const config = require('./config.json');
 
-const location = { 9713: { x: 52232, y: 117318, z: 4500 } };
+const location = { 9713: { x: 52232, y: 117318, z: 4400 } };
 const ZONE_SANCTUARY = 9714;
 
 module.exports = function RedirectGg(mod) {
@@ -36,13 +36,14 @@ module.exports = function RedirectGg(mod) {
 		// Ghillieglade dungeon
 		if (myZone in location) {
 			Object.assign(e.loc, location[myZone]);
+			mod.send('C_PLAYER_LOCATION', 5, e);
 			return true;
 		}
 		// auto-reset at Velik's Sanctuary
 		else if (myZone === ZONE_SANCTUARY) {
 			if (notice) {
 				mod.send('S_DUNGEON_EVENT_MESSAGE', 2, {
-					type: 31, // normal orange text
+					type: 65, // normal orange text
 					chat: 0,
 					channel: 27,
 					message: resetMessage
