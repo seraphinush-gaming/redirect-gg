@@ -3,7 +3,7 @@
     "name": "redirect-gg",
     "author": "seraphinush",
     "description": "Unethical tera-proxy module to redirect spawn location in TERA dungeon 'Ghillieglade'",
-    "version": "1.29.02",
+    "version": "1.29.03",
     "options": {
         "reloadable": true
     },
