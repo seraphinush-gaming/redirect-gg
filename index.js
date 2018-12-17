@@ -2,18 +2,20 @@
 
 const config = require('./config.json');
 
-const location = { 9713: { x: 52232, y: 117318, z: 4400 } };
-const ZONE_SANCTUARY = 9714;
+const
+	ZONE_GHILLIEGLADE = 9713,
+	LOC_GHILLIEGLADE = { x: 52232, y: 117318, z: 4400 },
+	ZONE_SANCTUARY = 9714;
 
 module.exports = function RedirectGg(mod) {
 	const cmd = mod.command || mod.require.command;
 
 	// config
-	let enable = config.enable;
-	let notice = config.notice;
+	let enable = config.enable,
+		notice = config.notice;
 
-	let	myZone = 0;
-	let resetMessage = mod.region === "kr" ? "던전이 초기화 되었습니다 !" : "Dungeon has been reset !";
+	let myZone = 0,
+		resetMessage = mod.region === "kr" ? "던전이 초기화 되었습니다 !" : "Dungeon has been reset !";
 
 	// command
 	// toggle
@@ -25,22 +27,19 @@ module.exports = function RedirectGg(mod) {
 	});
 
 	// mod.game
-	mod.game.me.on('change_zone', (zone) => {
-		myZone = zone;
-	});
+	mod.game.me.on('change_zone', z => myZone = z);
 
 	// code
 	mod.hook('S_SPAWN_ME', 3, (e) => {
 		if (!enable)
 			return;
-		// Ghillieglade dungeon
-		if (myZone in location) {
-			Object.assign(e.loc, location[myZone]);
+		if (myZone === ZONE_GHILLIEGLADE) {
+			Object.assign(e.loc, LOC_GHILLIEGLADE);
 			mod.send('C_PLAYER_LOCATION', 5, e);
 			return true;
 		}
-		// auto-reset at Velik's Sanctuary
 		else if (myZone === ZONE_SANCTUARY) {
+			mod.send('C_RESET_ALL_DUNGEON', 1, {});
 			if (notice) {
 				mod.send('S_DUNGEON_EVENT_MESSAGE', 2, {
 					type: 65, // normal orange text
@@ -49,12 +48,28 @@ module.exports = function RedirectGg(mod) {
 					message: resetMessage
 				});
 			}
-			mod.send('C_RESET_ALL_DUNGEON', 1, {});
-			
 		}
 	});
 
 	// helper
 	function send(msg) { cmd.message(': ' + msg); }
+
+	// reload
+	this.saveState = () => {
+		let state = {
+			enable: enable,
+			notice: notice
+		};
+		return state;
+	}
+
+	this.loadState = (state) => {
+		enable = state.enable;
+		notice = state.notice;
+	}
+
+	this.destructor = () => {
+		cmd.remove('gg');
+	}
 
 }
