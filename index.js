@@ -27,7 +27,7 @@ module.exports = function RedirectGg(mod) {
 	});
 
 	// mod.game
-	mod.game.me.on('change_zone', z => myZone = z);
+	mod.game.me.on('change_zone', zone => myZone = zone);
 
 	// code
 	mod.hook('S_SPAWN_ME', 3, (e) => {
