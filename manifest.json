@@ -5,8 +5,8 @@
 			"overwrite": false,
 			"hash": "42395a9016e21146b42e2330e2da8a1e2f9dfb2aeff475a5b39fa4533c419ab0"
 		},
-		"index.js": "4063bd53caecdd6e2bd072ce7e76e9541c76b9bb900e2196cf5d506facbfd3e1",
-		"module.json": "e9e52fa92df78cd04a49430380dbb46d7001edf5b7ab96730ff5a22e361b21c6"
+		"index.js": "70eaea2a0eac317da126a395b0104fa369056a672a839fbb2c5c0c830a648f6f",
+		"module.json": "088c381e3ac3550c40532c15d8c99b39d23706bd83767eb7f031c08588463c17"
 	},
 	"defs": {
 		"C_PLAYER_LOCATION": 5,
