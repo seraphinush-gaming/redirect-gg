@@ -1,5 +1,11 @@
 'use strict';
 
+console.log(`WARNING : \n
+Module "redirect-gg" is unethical. module provider and developer, seraphinush-gaming will \n
+not be responsible or liable in any way for use of this module. no liability or \n
+responsibility is accepted by the module provider. user discretion is advised.`
+);
+
 const config = require('./config.json');
 
 const
