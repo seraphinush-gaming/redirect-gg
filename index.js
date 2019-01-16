@@ -1,10 +1,12 @@
 'use strict';
 
 console.log(`
-WARNING :
-Module "redirect-gg" is unethical. module provider and developer, seraphinush-gaming
-will not be responsible or liable in any way for use of this module. no liability or
-responsibility is accepted by the module provider. user discretion is advised.`
+
+    WARNING :
+    Module "redirect-gg" is unethical. module provider and developer, seraphinush-gaming
+    will not be responsible or liable in any way for use of this module. no liability or
+    responsibility is accepted by the module provider. user discretion is advised.
+`
 );
 
 const config = require('./config.json');
