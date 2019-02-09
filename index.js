@@ -1,8 +1,7 @@
 'use strict';
 
 console.log(`
-
-    WARNING :
+	WARNING :
     Module "redirect-gg" is unethical. module provider and developer, seraphinush-gaming
     will not be responsible or liable in any way for use of this module. no liability or
     responsibility is accepted by the module provider. user discretion is advised.
@@ -35,8 +34,8 @@ module.exports = function RedirectGg(mod) {
 		}
 	});
 
-	// mod.game
-	mod.game.me.on('change_zone', zone => myZone = zone);
+	// game state
+	mod.hook('S_LOAD_TOPO', 3, (e) => myZone = e.zone);
 
 	// code
 	mod.hook('S_SPAWN_ME', 3, (e) => {

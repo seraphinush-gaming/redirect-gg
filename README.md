@@ -10,7 +10,7 @@ Support seraph via paypal donations, thanks in advance !
 ```
 
 ## Auto-update guide
-- Create a folder called `redirect-gg` in `tera-proxy/mods` and download >> [`module.json`](https://raw.githubusercontent.com/seraphinush-gaming/redirect-gg/master/module.json) << (right-click this link and save as..) into the folder
+- Create a folder called `redirect-gg` in `tera-proxy/mods` and download >> [`module.json`](https://raw.githubusercontent.com/seraphinush-gaming/redirect-gg/master/module.json) << (right-click this link and save link as..) into the folder
 
 ## Usage
 - __`gg`__
@@ -27,6 +27,8 @@ Support seraph via paypal donations, thanks in advance !
 ## Changelog
 <details>
 
+    1.31
+    - Removed `tera-game-state` usage
     1.30
     - Added hot-reload support
     1.29
@@ -34,7 +36,7 @@ Support seraph via paypal donations, thanks in advance !
     1.28
     - Added reset notice at Sanctuary
     1.26
-    - Removed `command` require()
+    - Removed `Command` require()
     - Removed `tera-game-state` require()
     - Updated to `mod.command`
     - Updated to `mod.game`

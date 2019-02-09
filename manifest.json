@@ -1,17 +1,18 @@
 {
 	"files": {
-		"README.md": "3e682052cb1f6dc26832aa90c9465ffcc481ad7427e4cd4ded6daa792c01f39d",
+		"README.md": "4e6c825343df792b280297ccd729da0bd4b592dc700d0b3d38117e9c035a8097",
 		"config.json": {
 			"overwrite": false,
 			"hash": "42395a9016e21146b42e2330e2da8a1e2f9dfb2aeff475a5b39fa4533c419ab0"
 		},
-		"index.js": "67972d09a67cbd188ec3c40220e6df316dfea41b16fe2b0c2927652f974b63d7",
-		"module.json": "07c585772dda8e1550b47a7389ca8c7eaa72450d96f080f95e341393d6fb4038"
+		"index.js": "6c389ded873e9970c360b0b23dc8b8ee167b5995b82925bf55abdb1c584257d4",
+		"module.json": "326796133ae6861742624efbfc3d370ca02231a75018dca59a6e73ed0fae5402"
 	},
 	"defs": {
 		"C_PLAYER_LOCATION": 5,
 		"C_RESET_ALL_DUNGEON": 1,
 		"S_DUNGEON_EVENT_MESSAGE": 2,
+		"S_LOAD_TOPO": 3,
 		"S_SPAWN_ME": 3
 	}
 }
