@@ -1,7 +1,7 @@
 'use strict';
 
 console.log(`
-	WARNING :
+    WARNING :
     Module "redirect-gg" is unethical. module provider and developer, seraphinush-gaming
     will not be responsible or liable in any way for use of this module. no liability or
     responsibility is accepted by the module provider. user discretion is advised.
@@ -16,7 +16,7 @@ const
 	ZONE_SANCTUARY = 9714;
 
 module.exports = function RedirectGg(mod) {
-	const cmd = mod.command || mod.require.command;
+	const cmd = mod.command;
 
 	// config
 	let enable = config.enable,
@@ -35,15 +35,24 @@ module.exports = function RedirectGg(mod) {
 	});
 
 	// game state
-	mod.hook('S_LOAD_TOPO', 3, (e) => myZone = e.zone);
+	mod.hook('S_LOAD_TOPO', 3, { order: -1000 }, (e) => myZone = e.zone);
 
 	// code
-	mod.hook('S_SPAWN_ME', 3, (e) => {
+	mod.hook('S_SPAWN_ME', 3, { order: -1000 }, (e) => {
 		if (!enable)
 			return;
 		if (myZone === ZONE_GHILLIEGLADE) {
 			Object.assign(e.loc, LOC_GHILLIEGLADE);
-			mod.send('C_PLAYER_LOCATION', 5, e);
+			mod.send('C_PLAYER_LOCATION', 5, {
+				loc: LOC_GHILLIEGLADE,
+				w: e.w,
+				lookDirection: 0,
+				dest: 0,
+				type: 7,
+				jumpDistance: 0,
+				inShuttle: false,
+				time: Date.now()
+			});
 			return true;
 		}
 		else if (myZone === ZONE_SANCTUARY) {
