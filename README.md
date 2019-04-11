@@ -20,6 +20,9 @@ Support seraph via paypal donations, thanks in advance !
 - __`enable`__
   - Initialize module on/off
   - Default is `true`
+- __`notice`__
+  - Initialize reset notice on/off
+  - Default is `false`
 
 ## Info
 - Original author : [Some-AV-Popo](https://github.com/Some-AV-Popo)
