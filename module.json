@@ -1,13 +1,15 @@
 {
-    "author": "seraphinush",
-    "description": "Unethical tera-proxy module to redirect spawn location in TERA dungeon 'Ghillieglade'",
-    "disableAutoUpdate": false,
-    "donationUrl": "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=B7QQJZV9L5P2J&source=url",
-    "name": "redirect-gg",
-    "options": {
-        "reloadable": true
-    },
-    "servers": ["https://raw.githubusercontent.com/seraphinush-gaming/redirect-gg/master/"],
-    "supportUrl": "https://github.com/seraphinush-gaming/redirect-gg/blob/master/README.md",
-    "version": "1.31.01"
+  "author": "seraphinush",
+  "description": "Unethical tera-proxy module to redirect spawn location in TERA dungeon 'Ghillieglade'",
+  "disableAutoUpdate": false,
+  "donationUrl": "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=B7QQJZV9L5P2J&source=url",
+  "name": "redirect-gg",
+  "options": {
+    "reloadable": true
+  },
+  "servers": [
+    "https://raw.githubusercontent.com/seraphinush-gaming/redirect-gg/master/"
+  ],
+  "supportUrl": "https://github.com/seraphinush-gaming/redirect-gg/blob/master/README.md",
+  "version": "1.31.02"
 }

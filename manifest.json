@@ -3,10 +3,10 @@
 		"README.md": "4e6c825343df792b280297ccd729da0bd4b592dc700d0b3d38117e9c035a8097",
 		"config.json": {
 			"overwrite": false,
-			"hash": "42395a9016e21146b42e2330e2da8a1e2f9dfb2aeff475a5b39fa4533c419ab0"
+			"hash": "3a895a2beaf61ce38481c4ff91664864296fe1491f5911d16099311053e6a843"
 		},
-		"index.js": "d4b922a00b2fcf5bf817968ee8a51ecd5f4be276316cb4918f50b6e4060513d2",
-		"module.json": "847f4432ce20b2ecb1f49ed88a8610fae193a732c221463bb70551ba28a35646"
+		"index.js": "0ea8fe5ad2c8cd527992800983efab9ff34108772380e0a2c3b04d4c84835c12",
+		"module.json": "0cdb1578ffd1dc41d80415d6da15d87e1337cf667b08f818628a40295949b178"
 	},
 	"defs": {
 		"C_PLAYER_LOCATION": 5,
