@@ -37,32 +37,21 @@ module.exports = function RedirectGg(mod) {
 
   // code
   mod.hook('S_SPAWN_ME', 3, { order: -1000 }, (e) => {
-    if (!enable) {
-      return;
-    }
-    if (myZone === ZONE_GHILLIEGLADE) {
-      Object.assign(e.loc, LOC_GHILLIEGLADE);
-      mod.send('C_PLAYER_LOCATION', 5, {
-        loc: LOC_GHILLIEGLADE,
-        w: e.w,
-        lookDirection: 0,
-        dest: 0,
-        type: 7,
-        jumpDistance: 0,
-        inShuttle: false,
-        time: Date.now()
-      });
-      return true;
-    }
-    else if (myZone === ZONE_SANCTUARY) {
-      mod.send('C_RESET_ALL_DUNGEON', 1, {});
-      if (notice) {
-        mod.send('S_DUNGEON_EVENT_MESSAGE', 2, {
-          type: 65, // normal orange text
-          chat: 0,
-          channel: 27,
-          message: resetMessage
-        });
+    if (enable) {
+      if (myZone === ZONE_GHILLIEGLADE) {
+        Object.assign(e.loc, LOC_GHILLIEGLADE);
+        return true;
+      }
+      else if (myZone === ZONE_SANCTUARY) {
+        mod.send('C_RESET_ALL_DUNGEON', 1, {});
+        if (notice) {
+          mod.send('S_DUNGEON_EVENT_MESSAGE', 2, {
+            type: 65, // normal orange text
+            chat: 0,
+            channel: 27,
+            message: resetMessage
+          });
+        }
       }
     }
   });
