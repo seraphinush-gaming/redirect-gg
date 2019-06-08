@@ -36,6 +36,8 @@ Support seraph via paypal donations, thanks in advance !
 ## Changelog
 <details>
 
+    1.32
+    - Added settings-migrator support
     1.31
     - Removed `tera-game-state` usage
     1.30
