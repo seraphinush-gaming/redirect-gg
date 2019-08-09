@@ -28,7 +28,31 @@ module.exports = function RedirectGg(mod) {
   });
 
   // game state
-  mod.hook('S_LOAD_TOPO', 3, { order: -1000 }, (e) => myZone = e.zone);
+  mod.game.me.on('change_zone', (zone) => {
+    myZone = zone;
+  });
+
+  /* mod.game.on('leave_loading_screen', () => {
+    if (settings.enable) {
+      if (myZone === ZONE_GHILLIEGLADE) {
+        Object.assign(e.loc, LOC_GHILLIEGLADE);
+        return true;
+      }
+      if (myZone === ZONE_SANCTUARY) {
+        mod.send('C_RESET_ALL_DUNGEON', 1, {});
+        if (settings.notice) {
+          mod.send('S_DUNGEON_EVENT_MESSAGE', 2, {
+            type: 65, // normal orange text
+            chat: 0,
+            channel: 27,
+            message: resetMessage
+          });
+        }
+      }
+    }
+  }); */
+
+  //mod.hook('S_LOAD_TOPO', 3, { order: -1000 }, (e) => myZone = e.zone);
 
   // code
   mod.hook('S_SPAWN_ME', 3, { order: -1000 }, (e) => {
