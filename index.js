@@ -11,62 +11,69 @@ const ZONE_GHILLIEGLADE = 9713;
 const LOC_GHILLIEGLADE = { x: 52232, y: 117318, z: 4400 };
 const ZONE_SANCTUARY = 9714;
 
-module.exports = function RedirectGg(mod) {
-  const cmd = mod.command;
+class RedirectGg {
 
-  let settings = mod.settings;
+  constructor(mod) {
 
-  let myZone = 0;
-  let resetMessage = mod.region === "kr" ? "던전이 초기화 되었습니다 !" : "Dungeon has been reset !";
+    this.mod = mod;
+    this.cmd = mod.command;
+    this.game = mod.game;
+    this.settings = mod.settings;
 
-  // command
-  cmd.add('gg', {
-    '$none': () => {
-      settings.enable = !settings.enable;
-      send(`${settings.enable ? 'En' : 'Dis'}abled`);
-    }
-  });
+    this.reset_message = mod.region === "kr" ? "던전이 초기화 되었습니다 !" : "Dungeon has been reset !";
+    this.zone = 0;
 
-  // game state
-  mod.game.me.on('change_zone', (zone) => {
-    myZone = zone;
-  });
-
-  // code
-  mod.hook('S_SPAWN_ME', 3, { order: -1000 }, (e) => {
-    if (settings.enable) {
-      if (myZone === ZONE_GHILLIEGLADE) {
-        Object.assign(e.loc, LOC_GHILLIEGLADE);
-        return true;
+    // command
+    this.cmd.add('gg', {
+      '$none': () => {
+        this.settings.enable = !this.settings.enable;
+        this.send(`${this.settings.enable ? 'En' : 'Dis'}abled`);
       }
-      if (myZone === ZONE_SANCTUARY) {
-        mod.send('C_RESET_ALL_DUNGEON', 1, {});
-        if (settings.notice) {
-          mod.send('S_DUNGEON_EVENT_MESSAGE', 2, {
-            type: 65, // normal orange text
-            chat: 0,
-            channel: 27,
-            message: resetMessage
-          });
+    });
+
+    // game state
+    this.game.me.on('change_zone', (zone) => {
+      this.zone = zone;
+    });
+
+    // code
+    this.mod.hook('S_SPAWN_ME', 3, { order: -1000 }, (e) => {
+      if (this.settings.enable) {
+        if (this.zone === ZONE_GHILLIEGLADE) {
+          Object.assign(e.loc, LOC_GHILLIEGLADE);
+          return true;
+        }
+        if (this.zone === ZONE_SANCTUARY) {
+          this.mod.send('C_RESET_ALL_DUNGEON', 1, {});
+          if (this.settings.notice) {
+            this.mod.send('S_DUNGEON_EVENT_MESSAGE', 2, {
+              type: 65, // normal orange text
+              chat: 0,
+              channel: 27,
+              message: this.reset_message
+            });
+          }
         }
       }
-    }
-  });
+    });
+
+  }
+
+  destructor() {
+    this.cmd.remove('gg');
+
+    this.zone = undefined;
+    this.reset_message = undefined;
+
+    this.settings = undefined;
+    this.game = undefined;
+    this.cmd = undefined;
+    this.mod = undefined;
+  }
 
   // helper
-  function send(msg) { cmd.message(': ' + msg); }
-
-  // reload
-  this.saveState = () => {
-    return null;
-  }
-
-  this.loadState = (state) => {
-    //
-  }
-
-  this.destructor = () => {
-    cmd.remove('gg');
-  }
+  send() { this.cmd.message(': ' + [...arguments].join('\n\t - ')); }
 
 }
+
+module.exports = RedirectGg;

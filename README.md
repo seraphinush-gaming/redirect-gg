@@ -36,6 +36,8 @@ Support seraph via paypal donations, thanks in advance !
 ## Changelog
 <details>
 
+    2.00
+    - Update module as class export
     1.33
     - Reinstated `tera-game-state`
     1.32
