@@ -2,7 +2,7 @@
 
 const DefaultSettings = {
   "enable": true,
-  "notice": true
+  "notice": false
 };
 
 function MigrateSettings(from_ver, to_ver, settings) {
