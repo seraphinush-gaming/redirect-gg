@@ -11,8 +11,8 @@
     "settingsMigrator": "settings.js"
   },
   "servers": [
-    "https://raw.githubusercontent.com/seraphinush-gaming/redirect-gg/master/"
+    "https://raw.githubusercontent.com/ylennia-archives/redirect-gg/master/"
   ],
-  "supportUrl": "https://github.com/seraphinush-gaming/redirect-gg/blob/master/README.md",
-  "version": "2.00.01"
+  "supportUrl": "https://github.com/ylennia-archives/redirect-gg/blob/master/README.md",
+  "version": "2.00.02"
 }
